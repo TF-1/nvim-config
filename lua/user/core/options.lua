@@ -16,7 +16,7 @@ vim.opt.syntax = "ON" -- str:  Allow syntax highlighting
 vim.opt.termguicolors = true -- bool: If term supports ui color then enable
 
 -- [[ Search ]]
-vim.opt.hlsearch = false -- bool: Highlight search matches
+vim.opt.hlsearch = true -- bool: Highlight search matches
 vim.opt.ignorecase = true -- bool: Ignore case in search patterns
 vim.opt.incsearch = true -- bool: Use incremental search
 vim.opt.smartcase = true -- bool: Override ignorecase if search contains capitals
