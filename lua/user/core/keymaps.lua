@@ -1,5 +1,5 @@
 -- set leader key to space
-local default_opts = { noremap = true, silent = true }
+local default_opts = { remap = false, silent = true }
 local keymap = vim.keymap -- for conciseness
 
 ---------------------
@@ -25,10 +25,11 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "n", "nzz", default_opts)
 keymap.set("n", "N", "Nzz", default_opts)
 
--- Move line up or down
-keymap.set("n", "<S-down>", ":m .+1<CR>==")
-keymap.set("n", "<S-up>", ":m .-2<CR>==")
---keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- Move line up or down (using tpope unimpaired)
+keymap.set("n", "<S-down>", "]e", { remap = true })
+keymap.set("n", "<S-up>", "[e", { remap = true })
+keymap.set("x", "<S-down>", "]egv", { remap = true })
+keymap.set("x", "<S-up>", "[egv", { remap = true })
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
