@@ -436,8 +436,8 @@ require("nvim-tree").setup({
 -- 	},
 })
 --require("core.plugs")
-require("lua.user.core.options")
-require("lua.user.core.keymaps")
+require("user.core.options")
+require("user.core.keymaps")
 --require("user.core.colorscheme")
 
 
